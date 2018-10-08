@@ -1,0 +1,22 @@
+{
+  "name": "movie-list",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jordanstholmes/movie-list.git"
+  },
+  "author": "Jordan Holmes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jordanstholmes/movie-list/issues"
+  },
+  "homepage": "https://github.com/jordanstholmes/movie-list#readme",
+  "devDependencies": {
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  }
+}
