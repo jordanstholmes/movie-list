@@ -2,9 +2,10 @@
   "name": "movie-list",
   "version": "1.0.0",
   "description": "Lists movies",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "open dist/index.html",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,18 @@
   "bugs": {
     "url": "https://github.com/jordanstholmes/movie-list/issues"
   },
-  "homepage": "https://github.com/jordanstholmes/movie-list#readme"
+  "homepage": "https://github.com/jordanstholmes/movie-list#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
 }
