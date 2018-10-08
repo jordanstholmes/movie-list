@@ -1,8 +1,10 @@
 import _ from 'lodash';
 import './style.css';
+var React = require('react');
+var ReactDOM = require('react-dom');
 
 
-function component() {
+function Component() {
   // let element = document.createElement('div');
 
   // let arrayWords = ['hello', 'there'];
@@ -15,4 +17,4 @@ function component() {
   return <div>sup dude</div>
 }
 
-document.body.appendChild(component());
+ReactDOM.render(<h1>Hello, world!</h1>, document.getElementById('root'));
