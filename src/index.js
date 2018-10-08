@@ -3,14 +3,16 @@ import './style.css';
 
 
 function component() {
-  let element = document.createElement('div');
+  // let element = document.createElement('div');
 
-  let arrayWords = ['hello', 'there'];
+  // let arrayWords = ['hello', 'there'];
 
-  element.innerHTML = _.join([...arrayWords], ' ');
-  element.classList.add('hello');
+  // element.innerHTML = _.join([...arrayWords], ' ');
+  // element.classList.add('hello');
 
-  return element;
+  // return element;
+
+  return <div>sup dude</div>
 }
 
 document.body.appendChild(component());
