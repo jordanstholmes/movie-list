@@ -10,9 +10,7 @@ function Component() {
   var innerText = 'I am a movie';
 
   return (
-    <div className='hello'>
       <MovieList />
-    </div>
   );
 }
 
