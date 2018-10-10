@@ -52,9 +52,14 @@ END OF RESET
 ************************************************************/
 
 body {
-  display: flex;
+  /*display: flex;*/
   width: 100%;
   padding: 40px;
+  /*justify-content: center;*/
+}
+
+.container {
+  display: flex;
   justify-content: center;
 }
 
@@ -67,6 +72,12 @@ body {
 header {
   width: 100%;
   background-color: lightgray;
+  height: 50px;
+}
+
+.movie-list-container {
+  width: 75%;
+  border: 6px solid red;
   height: 50px;
 }
 
