@@ -6,7 +6,7 @@ var ReactDOM = require('react-dom');
 
 function Component() {
   
-  var innerText = 'Kill it today, bouge!';
+  var innerText = 'I am a movie';
 
   return <div className='hello'>{innerText}</div>
 }
