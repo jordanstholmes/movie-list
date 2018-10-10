@@ -76,25 +76,29 @@ body {
 .app-container {
   width: 50%;
   height: 400px;
-  border: 6px solid #949599;
+  border: 1px solid gray;
 }
 
 header {
   width: 100%;
+  padding: 10px;
   background-color: lightgray;
   height: 50px;
+  font-family: arial;
 }
 
 .movie-list-container {
   width: 90%;
-  border: 6px solid red;
-  height: 50px;
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+  border-bottom: 1px solid gray;
+  /*border: 3px solid lightgray;*/
   display: flex;
 }
 
 .list-item {
   width: 100%;
-  border: 6px solid #949599;
+  border-top: 1px solid gray;
   height: 40px;
 }
 

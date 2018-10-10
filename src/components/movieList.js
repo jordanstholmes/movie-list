@@ -3,7 +3,7 @@ var MovieListItem = require('./movieListItem.js');
 
 module.exports = function MovieList(props) {
   return (
-    <div className='movie-list-container'>
+    <div className='container movie-list-container'>
       <MovieListItem />
       <MovieListItem />
       <MovieListItem />
