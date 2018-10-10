@@ -92,14 +92,10 @@ header {
   display: flex;
 }
 
-.movie-list-row {
+.list-item {
   width: 100%;
   border: 6px solid #949599;
   height: 40px;
-}
-
-.movieListElement {
-
 }
 
 h1 {

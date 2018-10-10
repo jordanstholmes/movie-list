@@ -1,6 +1,6 @@
-import _ from 'lodash';
-import './style.css';
-import MovieList from './components/movieList.js';
+
+require('./style.css');
+var MovieList = require('./components/movieList.js');
 var React = require('react');
 var ReactDOM = require('react-dom');
 
