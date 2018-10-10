@@ -64,10 +64,11 @@ body {
   border: 6px solid #949599;
 }
 
-/*header {
+header {
   width: 100%;
-  border: 6px solid #949599;
-}*/
+  background-color: lightgray;
+  height: 50px;
+}
 
 .movie-list-row {
   width: 100%;
