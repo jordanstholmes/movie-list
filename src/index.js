@@ -3,6 +3,7 @@ require('./style.css');
 var MovieList = require('./components/movieList.js');
 var React = require('react');
 var ReactDOM = require('react-dom');
+var movieData = require('../data.js');
 
 
 function Component() {
@@ -10,7 +11,7 @@ function Component() {
   var innerText = 'I am a movie';
 
   return (
-      <MovieList />
+      <MovieList movieData={movieData}/>
   );
 }
 
