@@ -86,14 +86,14 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./data.js":
-/*!*****************!*\
-  !*** ./data.js ***!
-  \*****************/
+/***/ "./database/data.js":
+/*!**************************!*\
+  !*** ./database/data.js ***!
+  \**************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = [{\n  title: 'Mean Girls'\n}, {\n  title: 'Hackers'\n}, {\n  title: 'The Grey'\n}, {\n  title: 'Sunshine'\n}, {\n  title: 'Ex Machina'\n}];\n\n//# sourceURL=webpack:///./data.js?");
+eval("module.exports = [{\n  title: 'Mean Girls'\n}, {\n  title: 'Hackers'\n}, {\n  title: 'The Grey'\n}, {\n  title: 'Sunshine'\n}, {\n  title: 'Ex Machina'\n}];\n\n//# sourceURL=webpack:///./database/data.js?");
 
 /***/ }),
 
@@ -302,7 +302,7 @@ eval("var React = __webpack_require__(/*! react */ \"./node_modules/react/index.
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./style.css */ \"./view/style.css\");\n\nvar MovieList = __webpack_require__(/*! ./components/movieList.js */ \"./view/components/movieList.js\");\n\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar ReactDOM = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nvar movieData = __webpack_require__(/*! ../data.js */ \"./data.js\");\n\nfunction Component() {\n  var innerText = 'I am a movie';\n  return React.createElement(MovieList, {\n    movieData: movieData\n  });\n}\n\nReactDOM.render(React.createElement(Component, null), document.getElementById('root'));\n\n//# sourceURL=webpack:///./view/index.js?");
+eval("__webpack_require__(/*! ./style.css */ \"./view/style.css\");\n\nvar MovieList = __webpack_require__(/*! ./components/movieList.js */ \"./view/components/movieList.js\");\n\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar ReactDOM = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nvar movieData = __webpack_require__(/*! ../database/data.js */ \"./database/data.js\");\n\nfunction Component() {\n  var innerText = 'I am a movie';\n  return React.createElement(MovieList, {\n    movieData: movieData\n  });\n}\n\nReactDOM.render(React.createElement(Component, null), document.getElementById('root'));\n\n//# sourceURL=webpack:///./view/index.js?");
 
 /***/ }),
 

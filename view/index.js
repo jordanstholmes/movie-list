@@ -3,7 +3,7 @@ require('./style.css');
 var MovieList = require('./components/movieList.js');
 var React = require('react');
 var ReactDOM = require('react-dom');
-var movieData = require('../data.js');
+var movieData = require('../database/data.js');
 
 
 function Component() {
