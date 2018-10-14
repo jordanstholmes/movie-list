@@ -2,7 +2,7 @@ const MongoClient = require('mongodb').MongoClient;
 const url = 'mongodb://localhost:27017';
 const dbName = 'movielist';
 
-MongoClient.connect(url, function(err, client) {
+MongoClient.connect(url, { useNewUrlParser: true }, function(err, client) {
   if (err) {
     console.log(err);
   } else {
