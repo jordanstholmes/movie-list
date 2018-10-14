@@ -8,7 +8,7 @@ module.exports = function MovieList(props) {
 
   return (
     <div className='container movie-list-container'>
-      { props.movieData.map((movie) => <MovieListItem title={movie.title} />) }
+      { props.movieData.map((movie) => <MovieListItem key={movie.id} title={movie.title} />) }
     </div>
   );
 }
