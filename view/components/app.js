@@ -1,6 +1,7 @@
 const React = require('react');
 const MovieList = require('./movieList.js');
 const movieData = require('../../database/data.js');
+const SearchBar = require('./searchBar.js');
 
 
 class App extends React.Component {
@@ -18,6 +19,8 @@ class App extends React.Component {
         <header>
           <h1>MovieList</h1>
         </header>
+
+        <SearchBar />
 
         <div className='container'>
           <MovieList movieData={this.state.movieData} />

@@ -59,9 +59,12 @@ END OF RESET
           box-sizing: border-box;
 }
 
+textarea, select, input, button { outline: none; }
+
 body {
   /*display: flex;*/
   padding: 40px;
+  font-family: arial;
   /*justify-content: center;*/
 }
 
@@ -104,6 +107,31 @@ header {
 }
 
 h1 {
+  font-family: 'Mali', sans-serif;
   font-size: 25px;
 }
+
+.search-bar {
+  font-size: 12px;
+  height: 30px;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid lightgray;
+}
+
+/************************************************************
+BUTTONS
+************************************************************/
+
+.btn {
+  cursor: pointer;
+  border: 1px solid lightgray;
+  display: inline-block;
+}
+
+.search-btn {
+  font-size: 12px;
+  border-radius: 0 5px 5px 0;
+  padding: 8px 10px;
+}
+
 
