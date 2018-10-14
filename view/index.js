@@ -1,18 +1,18 @@
 
 require('./style.css');
-var MovieList = require('./components/movieList.js');
-var React = require('react');
-var ReactDOM = require('react-dom');
-var movieData = require('../database/data.js');
+const React = require('react');
+const ReactDOM = require('react-dom');
+// const movieData = require('../database/data.js');
+const App = require('./components/app.js');
 
 
-function Component() {
+// function Component() {
   
-  var innerText = 'I am a movie';
+//   const innerText = 'I am a movie';
 
-  return (
-      <MovieList movieData={movieData}/>
-  );
-}
+//   return (
+//       <MovieList movieData={movieData}/>
+//   );
+// }
 
-ReactDOM.render(<Component />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));

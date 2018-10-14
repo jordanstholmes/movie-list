@@ -273,6 +273,17 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
 
 /***/ }),
 
+/***/ "./view/components/app.js":
+/*!********************************!*\
+  !*** ./view/components/app.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nconst MovieList = __webpack_require__(/*! ./movieList.js */ \"./view/components/movieList.js\");\n\nconst movieData = __webpack_require__(/*! ../../database/data.js */ \"./database/data.js\");\n\nclass App extends React.Component {\n  constructor(props) {\n    super(props);\n    this.state = {\n      movieData: movieData\n    };\n  }\n\n  render() {\n    return React.createElement(\"div\", {\n      className: \"container app-container\"\n    }, React.createElement(\"header\", null, React.createElement(\"h1\", null, \"MovieList\")), React.createElement(\"div\", {\n      className: \"container\"\n    }, React.createElement(MovieList, {\n      movieData: this.state.movieData\n    })));\n  }\n\n}\n\nmodule.exports = App;\n\n//# sourceURL=webpack:///./view/components/app.js?");
+
+/***/ }),
+
 /***/ "./view/components/movieList.js":
 /*!**************************************!*\
   !*** ./view/components/movieList.js ***!
@@ -302,7 +313,7 @@ eval("var React = __webpack_require__(/*! react */ \"./node_modules/react/index.
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./style.css */ \"./view/style.css\");\n\nvar MovieList = __webpack_require__(/*! ./components/movieList.js */ \"./view/components/movieList.js\");\n\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar ReactDOM = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nvar movieData = __webpack_require__(/*! ../database/data.js */ \"./database/data.js\");\n\nfunction Component() {\n  var innerText = 'I am a movie';\n  return React.createElement(MovieList, {\n    movieData: movieData\n  });\n}\n\nReactDOM.render(React.createElement(Component, null), document.getElementById('root'));\n\n//# sourceURL=webpack:///./view/index.js?");
+eval("__webpack_require__(/*! ./style.css */ \"./view/style.css\");\n\nconst React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nconst ReactDOM = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\"); // const movieData = require('../database/data.js');\n\n\nconst App = __webpack_require__(/*! ./components/app.js */ \"./view/components/app.js\"); // function Component() {\n//   const innerText = 'I am a movie';\n//   return (\n//       <MovieList movieData={movieData}/>\n//   );\n// }\n\n\nReactDOM.render(React.createElement(App, null), document.getElementById('root'));\n\n//# sourceURL=webpack:///./view/index.js?");
 
 /***/ }),
 
