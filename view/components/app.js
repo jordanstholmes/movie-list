@@ -1,6 +1,6 @@
 const React = require('react');
 const MovieList = require('./movieList.js');
-const movieData = require('../../database/data.js');
+const movieData = require('../../database/dummyData.js');
 const SearchBar = require('./searchBar.js');
 
 
