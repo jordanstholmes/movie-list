@@ -27,7 +27,7 @@ http.createServer(function(request, response) {
 
 }).listen(8080, '127.0.0.1');
 
-console.log('Listening at 8080...');
+console.log('Listening...');
 
 
   // else if (path === '/main.js') {

@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "test": "open dist/index.html",
-    "build": "webpack"
+    "build": "webpack",
+    "server": "nodemon server/server.js"
   },
   "repository": {
     "type": "git",
