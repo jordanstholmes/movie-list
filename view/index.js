@@ -2,7 +2,7 @@
 require('./style.css');
 const React = require('react');
 const ReactDOM = require('react-dom');
-// const movieData = require('../database/data.js');
+const movieData = require('../database/data.js');
 const App = require('./components/app.js');
 
 
@@ -15,4 +15,4 @@ const App = require('./components/app.js');
 //   );
 // }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App movieData={movieData}/>, document.getElementById('root'));

@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = [{\n  title: 'Mean Girls'\n}, {\n  title: 'Hackers'\n}, {\n  title: 'The Grey'\n}, {\n  title: 'Sunshine'\n}, {\n  title: 'Ex Machina'\n}];\n\n//# sourceURL=webpack:///./database/data.js?");
+eval("module.exports = [{\n  id: 1,\n  title: 'Mean Girls'\n}, {\n  id: 2,\n  title: 'Hackers'\n}, {\n  id: 3,\n  title: 'The Grey'\n}, {\n  id: 4,\n  title: 'Sunshine'\n}, {\n  id: 5,\n  title: 'Ex Machina'\n}];\n\n//# sourceURL=webpack:///./database/data.js?");
 
 /***/ }),
 
@@ -280,7 +280,7 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nconst MovieList = __webpack_require__(/*! ./movieList.js */ \"./view/components/movieList.js\");\n\nconst movieData = __webpack_require__(/*! ../../database/data.js */ \"./database/data.js\");\n\nconst SearchBar = __webpack_require__(/*! ./searchBar.js */ \"./view/components/searchBar.js\");\n\nclass App extends React.Component {\n  constructor(props) {\n    super(props);\n    this.state = {\n      movieData: movieData\n    };\n  }\n\n  render() {\n    return React.createElement(\"div\", {\n      className: \"container app-container\"\n    }, React.createElement(\"header\", null, React.createElement(\"h1\", null, \"MovieList\")), React.createElement(SearchBar, null), React.createElement(\"div\", {\n      className: \"container\"\n    }, React.createElement(MovieList, {\n      movieData: this.state.movieData\n    })));\n  }\n\n}\n\nmodule.exports = App;\n\n//# sourceURL=webpack:///./view/components/app.js?");
+eval("const React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nconst MovieList = __webpack_require__(/*! ./movieList.js */ \"./view/components/movieList.js\");\n\nconst SearchBar = __webpack_require__(/*! ./searchBar.js */ \"./view/components/searchBar.js\");\n\nclass App extends React.Component {\n  constructor(props) {\n    super(props);\n    this.state = {\n      movieData: this.props.movieData\n    };\n  }\n\n  render() {\n    return React.createElement(\"div\", {\n      className: \"container app-container\"\n    }, React.createElement(\"header\", null, React.createElement(\"h1\", null, \"MovieList\")), React.createElement(SearchBar, null), React.createElement(\"div\", {\n      className: \"container\"\n    }, React.createElement(MovieList, {\n      movieData: this.state.movieData\n    })));\n  }\n\n}\n\nmodule.exports = App;\n\n//# sourceURL=webpack:///./view/components/app.js?");
 
 /***/ }),
 
@@ -291,7 +291,7 @@ eval("const React = __webpack_require__(/*! react */ \"./node_modules/react/inde
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar MovieListItem = __webpack_require__(/*! ./movieListItem.js */ \"./view/components/movieListItem.js\");\n\nmodule.exports = function MovieList(props) {\n  // var movies = props.movieData.map((movie) => {\n  //   return \n  // });\n  return React.createElement(\"div\", {\n    className: \"container movie-list-container\"\n  }, props.movieData.map(movie => React.createElement(MovieListItem, {\n    title: movie.title\n  })));\n};\n\n//# sourceURL=webpack:///./view/components/movieList.js?");
+eval("var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar MovieListItem = __webpack_require__(/*! ./movieListItem.js */ \"./view/components/movieListItem.js\");\n\nmodule.exports = function MovieList(props) {\n  // var movies = props.movieData.map((movie) => {\n  //   return \n  // });\n  return React.createElement(\"div\", {\n    className: \"container movie-list-container\"\n  }, props.movieData.map(movie => React.createElement(MovieListItem, {\n    key: movie.id,\n    title: movie.title\n  })));\n};\n\n//# sourceURL=webpack:///./view/components/movieList.js?");
 
 /***/ }),
 
@@ -324,7 +324,7 @@ eval("var React = __webpack_require__(/*! react */ \"./node_modules/react/index.
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./style.css */ \"./view/style.css\");\n\nconst React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nconst ReactDOM = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\"); // const movieData = require('../database/data.js');\n\n\nconst App = __webpack_require__(/*! ./components/app.js */ \"./view/components/app.js\"); // function Component() {\n//   const innerText = 'I am a movie';\n//   return (\n//       <MovieList movieData={movieData}/>\n//   );\n// }\n\n\nReactDOM.render(React.createElement(App, null), document.getElementById('root'));\n\n//# sourceURL=webpack:///./view/index.js?");
+eval("__webpack_require__(/*! ./style.css */ \"./view/style.css\");\n\nconst React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nconst ReactDOM = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nconst movieData = __webpack_require__(/*! ../database/data.js */ \"./database/data.js\");\n\nconst App = __webpack_require__(/*! ./components/app.js */ \"./view/components/app.js\"); // function Component() {\n//   const innerText = 'I am a movie';\n//   return (\n//       <MovieList movieData={movieData}/>\n//   );\n// }\n\n\nReactDOM.render(React.createElement(App, {\n  movieData: movieData\n}), document.getElementById('root'));\n\n//# sourceURL=webpack:///./view/index.js?");
 
 /***/ }),
 

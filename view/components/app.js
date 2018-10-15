@@ -1,6 +1,5 @@
 const React = require('react');
 const MovieList = require('./movieList.js');
-const movieData = require('../../database/data.js');
 const SearchBar = require('./searchBar.js');
 
 
@@ -8,7 +7,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      movieData: movieData
+      movieData: this.props.movieData
     }
   }
 
