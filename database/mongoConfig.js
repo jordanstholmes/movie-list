@@ -1,19 +1,24 @@
 const dummyData = require('./dummyData.js');
+const Promise = require('bluebird');
 
-module.exports  = function congfigureMongo(db, callback) {
-  const collection = db.collection('movies');
+module.exports = function congfigureMongo(db) {
 
-  collection.remove(() => {
-    
-    collection.insertMany(dummyData, (err, results) => {
-      if (err) {
-        console.log(err);
-      } else {
-        callback(results);
-      }
-    });
-    
-  });
+  // console.log('DB ENTERS CONFIG:\n', db.collectionAsync);
 
-}
+  return db.collectionAsync('movies')
+    .then(collection => {
+      db.collectionAsync('movies'); 
+      collection.deleteMany();
+      return collection;
+    })
+    .then(collection => {
+      return collection.insertManyAsync(dummyData)
+    })
+    .then(dbResponse => {
+      // console.log(dbResponse);
+      // console.log('DB RIGHT BEFORE CONFIG RETURNS:', db.databaseName);
+      return db;
+    })
+    .catch(err => console.log(err));
 
+};

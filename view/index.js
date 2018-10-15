@@ -1,5 +1,7 @@
-
 require('./style.css');
+
+
+
 const React = require('react');
 const ReactDOM = require('react-dom');
 // const movieData = require('../database/data.js');
@@ -14,5 +16,7 @@ const App = require('./components/app.js');
 //       <MovieList movieData={movieData}/>
 //   );
 // }
+
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
