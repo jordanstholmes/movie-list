@@ -1,9 +1,10 @@
-var React = require('react');
+const React = require('react');
 
-module.exports = function SearchBar() {
+module.exports = function SearchBar(props) {
   return (
-    <form action='/movie-list' method='post'>
-      <input className='search-bar' type='text' placeholder='Search...'/><div className='btn search-btn'>Go!</div>
-    </form>
+    <div>
+      <input className='search-bar' type='text' placeholder='Search...'/>
+      <button className='btn search-btn' onClick={props.searchClickHandler} >Go!</button>
+    </div>
   );
 }

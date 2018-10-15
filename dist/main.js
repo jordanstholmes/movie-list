@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./controllers/handlers.js":
+/*!*********************************!*\
+  !*** ./controllers/handlers.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const Movies = __webpack_require__(/*! ../models/movies.js */ \"./models/movies.js\");\n\nexports.handleSearchClick = (searchStr, callback) => {\n  Movies.getFilteredMovies(searchStr, callback);\n};\n\n//# sourceURL=webpack:///./controllers/handlers.js?");
+
+/***/ }),
+
 /***/ "./database/data.js":
 /*!**************************!*\
   !*** ./database/data.js ***!
@@ -97,6 +108,17 @@ eval("module.exports = [{\n  id: 1,\n  title: 'Mean Girls'\n}, {\n  id: 2,\n  ti
 
 /***/ }),
 
+/***/ "./models/movies.js":
+/*!**************************!*\
+  !*** ./models/movies.js ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const movieData = __webpack_require__(/*! ../database/data.js */ \"./database/data.js\");\n\nexports.getAllMovies = callback => {\n  callback(movieData);\n};\n\nexports.getFilteredMovies = (searchStr, callback) => {\n  var filteredMovies = movieData.filter(movie => {\n    return movie.title.toUpperCase().indexOf(searchStr.toUpperCase()) !== -1;\n  });\n  callback(filteredMovies);\n};\n\n//# sourceURL=webpack:///./models/movies.js?");
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./view/style.css":
 /*!**************************************************!*\
   !*** ./node_modules/css-loader!./view/style.css ***!
@@ -104,7 +126,7 @@ eval("module.exports = [{\n  id: 1,\n  title: 'Mean Girls'\n}, {\n  id: 2,\n  ti
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \"  /* http://meyerweb.com/eric/tools/css/reset/ \\n     v2.0 | 20110126\\n     License: none (public domain)\\n  */\\n  html, body, div, span, applet, object, iframe,\\n  h1, h2, h3, h4, h5, h6, p, blockquote, pre,\\n  a, abbr, acronym, address, big, cite, code,\\n  del, dfn, em, img, ins, kbd, q, s, samp,\\n  small, strike, strong, sub, sup, tt, var,\\n  b, u, i, center,\\n  dl, dt, dd, ol, ul, li,\\n  fieldset, form, label, legend,\\n  table, caption, tbody, tfoot, thead, tr, th, td,\\n  article, aside, canvas, details, embed, \\n  figure, figcaption, footer, header, hgroup, \\n  menu, nav, output, ruby, section, summary,\\n  time, mark, audio, video {\\n    margin: 0;\\n    padding: 0;\\n    border: 0;\\n    font-size: 100%;\\n    font: inherit;\\n    vertical-align: baseline;\\n  }\\n  /* HTML5 display-role reset for older browsers */\\n  article, aside, details, figcaption, figure, \\n  footer, header, hgroup, menu, nav, section {\\n    display: block;\\n  }\\n  body {\\n    line-height: 1;\\n  }\\n  ol, ul {\\n    list-style: none;\\n  }\\n  blockquote, q {\\n    quotes: none;\\n  }\\n  blockquote:before, blockquote:after,\\n  q:before, q:after {\\n    content: '';\\n    content: none;\\n  }\\n  table {\\n    border-collapse: collapse;\\n    border-spacing: 0;\\n  }\\n\\n\\n/************************************************************\\nEND OF RESET\\n************************************************************/\\n\\n*,\\n*:before,\\n*:after {\\n  -webkit-box-sizing: border-box;\\n     -moz-box-sizing: border-box;\\n          box-sizing: border-box;\\n}\\n\\ntextarea, select, input, button { outline: none; }\\n\\nbody {\\n  /*display: flex;*/\\n  padding: 40px;\\n  font-family: arial;\\n  /*justify-content: center;*/\\n}\\n\\n.container {\\n  width: 100%;\\n  display: flex;\\n  justify-content: center;\\n  flex-wrap: wrap;\\n  align-items: flex-start;\\n}\\n\\n.app-container {\\n  width: 50%;\\n  height: 400px;\\n  border: 1px solid gray;\\n}\\n\\nheader {\\n  width: 100%;\\n  padding: 10px;\\n  background-color: lightgray;\\n  height: 50px;\\n  font-family: arial;\\n}\\n\\n.movie-list-container {\\n  width: 90%;\\n  border-right: 1px solid gray;\\n  border-left: 1px solid gray;\\n  border-bottom: 1px solid gray;\\n  /*border: 3px solid lightgray;*/\\n  display: flex;\\n}\\n\\n.list-item {\\n  width: 100%;\\n  border-top: 1px solid gray;\\n  height: 40px;\\n  padding: 10px;\\n}\\n\\nh1 {\\n  font-family: 'Mali', sans-serif;\\n  font-size: 25px;\\n}\\n\\n.search-bar {\\n  font-size: 12px;\\n  height: 30px;\\n  border-radius: 5px 0 0 5px;\\n  border: 1px solid lightgray;\\n}\\n\\n/************************************************************\\nBUTTONS\\n************************************************************/\\n\\n.btn {\\n  cursor: pointer;\\n  border: 1px solid lightgray;\\n  display: inline-block;\\n}\\n\\n.search-btn {\\n  font-size: 12px;\\n  border-radius: 0 5px 5px 0;\\n  padding: 8px 10px;\\n}\\n\\n\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./view/style.css?./node_modules/css-loader");
+eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \"  /* http://meyerweb.com/eric/tools/css/reset/ \\n     v2.0 | 20110126\\n     License: none (public domain)\\n  */\\n  html, body, div, span, applet, object, iframe,\\n  h1, h2, h3, h4, h5, h6, p, blockquote, pre,\\n  a, abbr, acronym, address, big, cite, code,\\n  del, dfn, em, img, ins, kbd, q, s, samp,\\n  small, strike, strong, sub, sup, tt, var,\\n  b, u, i, center,\\n  dl, dt, dd, ol, ul, li,\\n  fieldset, form, label, legend,\\n  table, caption, tbody, tfoot, thead, tr, th, td,\\n  article, aside, canvas, details, embed, \\n  figure, figcaption, footer, header, hgroup, \\n  menu, nav, output, ruby, section, summary,\\n  time, mark, audio, video {\\n    margin: 0;\\n    padding: 0;\\n    border: 0;\\n    font-size: 100%;\\n    font: inherit;\\n    vertical-align: baseline;\\n  }\\n  /* HTML5 display-role reset for older browsers */\\n  article, aside, details, figcaption, figure, \\n  footer, header, hgroup, menu, nav, section {\\n    display: block;\\n  }\\n  body {\\n    line-height: 1;\\n  }\\n  ol, ul {\\n    list-style: none;\\n  }\\n  blockquote, q {\\n    quotes: none;\\n  }\\n  blockquote:before, blockquote:after,\\n  q:before, q:after {\\n    content: '';\\n    content: none;\\n  }\\n  table {\\n    border-collapse: collapse;\\n    border-spacing: 0;\\n  }\\n\\n\\n/************************************************************\\nEND OF RESET\\n************************************************************/\\n\\n*,\\n*:before,\\n*:after {\\n  -webkit-box-sizing: border-box;\\n     -moz-box-sizing: border-box;\\n          box-sizing: border-box;\\n}\\n\\ntextarea, select, input, button { outline: none; }\\n\\nbody {\\n  /*display: flex;*/\\n  padding: 40px;\\n  font-family: arial;\\n  /*justify-content: center;*/\\n}\\n\\n.container {\\n  width: 100%;\\n  display: flex;\\n  justify-content: center;\\n  flex-wrap: wrap;\\n  align-items: flex-start;\\n}\\n\\n.app-container {\\n  width: 50%;\\n  height: 400px;\\n  border: 1px solid gray;\\n}\\n\\nheader {\\n  width: 100%;\\n  padding: 10px;\\n  background-color: lightgray;\\n  height: 50px;\\n  font-family: arial;\\n}\\n\\n.movie-list-container {\\n  width: 90%;\\n  border-right: 1px solid gray;\\n  border-left: 1px solid gray;\\n  border-bottom: 1px solid gray;\\n  /*border: 3px solid lightgray;*/\\n  display: flex;\\n}\\n\\n.list-item {\\n  width: 100%;\\n  border-top: 1px solid gray;\\n  height: 40px;\\n  padding: 10px;\\n}\\n\\nh1 {\\n  font-family: 'Mali', sans-serif;\\n  font-size: 25px;\\n}\\n\\n.search-bar {\\n  font-size: 12px;\\n  height: 30px;\\n  border-radius: 5px 0 0 5px;\\n  border: 1px solid lightgray;\\n}\\n\\n/************************************************************\\nBUTTONS\\n************************************************************/\\n\\n.btn {\\n  cursor: pointer;\\n  border: 1px solid lightgray;\\n  display: inline-block;\\n}\\n\\n.search-btn {\\n  font-size: 12px;\\n  border-radius: 0 5px 5px 0;\\n  /*padding: 8px 10px;*/\\n  height: 30px;\\n}\\n\\n\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./view/style.css?./node_modules/css-loader");
 
 /***/ }),
 
@@ -280,7 +302,7 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nconst MovieList = __webpack_require__(/*! ./movieList.js */ \"./view/components/movieList.js\");\n\nconst SearchBar = __webpack_require__(/*! ./searchBar.js */ \"./view/components/searchBar.js\");\n\nclass App extends React.Component {\n  constructor(props) {\n    super(props);\n    this.state = {\n      movieData: this.props.movieData\n    };\n  }\n\n  render() {\n    return React.createElement(\"div\", {\n      className: \"container app-container\"\n    }, React.createElement(\"header\", null, React.createElement(\"h1\", null, \"MovieList\")), React.createElement(SearchBar, null), React.createElement(\"div\", {\n      className: \"container\"\n    }, React.createElement(MovieList, {\n      movieData: this.state.movieData\n    })));\n  }\n\n}\n\nmodule.exports = App;\n\n//# sourceURL=webpack:///./view/components/app.js?");
+eval("const React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nconst MovieList = __webpack_require__(/*! ./movieList.js */ \"./view/components/movieList.js\");\n\nconst SearchBar = __webpack_require__(/*! ./searchBar.js */ \"./view/components/searchBar.js\");\n\nconst Handlers = __webpack_require__(/*! ../../controllers/handlers.js */ \"./controllers/handlers.js\");\n\nclass App extends React.Component {\n  constructor(props) {\n    super(props);\n    this.state = {\n      movieData: this.props.movieData\n    };\n  }\n\n  searchClickHandler() {\n    const searchBar = document.getElementsByClassName('search-bar')[0];\n    const searchStr = searchBar.value; // console.log(this);\n\n    Handlers.handleSearchClick(searchStr, filteredMovies => {\n      this.setState(filteredMovies);\n      console.log('I was clicked');\n    });\n  }\n\n  render() {\n    return React.createElement(\"div\", {\n      className: \"container app-container\"\n    }, React.createElement(\"header\", null, React.createElement(\"h1\", null, \"MovieList\")), React.createElement(SearchBar, {\n      searchClickHandler: this.searchClickHandler.bind(this)\n    }), React.createElement(\"div\", {\n      className: \"container\"\n    }, React.createElement(MovieList, {\n      movieData: this.state.movieData\n    })));\n  }\n\n}\n\nmodule.exports = App;\n\n//# sourceURL=webpack:///./view/components/app.js?");
 
 /***/ }),
 
@@ -313,7 +335,7 @@ eval("var React = __webpack_require__(/*! react */ \"./node_modules/react/index.
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nmodule.exports = function SearchBar() {\n  return React.createElement(\"form\", {\n    action: \"/movie-list\",\n    method: \"post\"\n  }, React.createElement(\"input\", {\n    className: \"search-bar\",\n    type: \"text\",\n    placeholder: \"Search...\"\n  }), React.createElement(\"div\", {\n    className: \"btn search-btn\"\n  }, \"Go!\"));\n};\n\n//# sourceURL=webpack:///./view/components/searchBar.js?");
+eval("const React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nmodule.exports = function SearchBar(props) {\n  return React.createElement(\"div\", null, React.createElement(\"input\", {\n    className: \"search-bar\",\n    type: \"text\",\n    placeholder: \"Search...\"\n  }), React.createElement(\"button\", {\n    className: \"btn search-btn\",\n    onClick: props.searchClickHandler\n  }, \"Go!\"));\n};\n\n//# sourceURL=webpack:///./view/components/searchBar.js?");
 
 /***/ }),
 
@@ -324,7 +346,7 @@ eval("var React = __webpack_require__(/*! react */ \"./node_modules/react/index.
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./style.css */ \"./view/style.css\");\n\nconst React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nconst ReactDOM = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nconst movieData = __webpack_require__(/*! ../database/data.js */ \"./database/data.js\");\n\nconst App = __webpack_require__(/*! ./components/app.js */ \"./view/components/app.js\"); // function Component() {\n//   const innerText = 'I am a movie';\n//   return (\n//       <MovieList movieData={movieData}/>\n//   );\n// }\n\n\nReactDOM.render(React.createElement(App, {\n  movieData: movieData\n}), document.getElementById('root'));\n\n//# sourceURL=webpack:///./view/index.js?");
+eval("__webpack_require__(/*! ./style.css */ \"./view/style.css\");\n\nconst React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nconst ReactDOM = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nconst Movies = __webpack_require__(/*! ../models/movies.js */ \"./models/movies.js\");\n\nconst App = __webpack_require__(/*! ./components/app.js */ \"./view/components/app.js\");\n\nMovies.getAllMovies(movieData => {\n  ReactDOM.render(React.createElement(App, {\n    movieData: movieData\n  }), document.getElementById('root'));\n});\n\n//# sourceURL=webpack:///./view/index.js?");
 
 /***/ }),
 

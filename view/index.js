@@ -2,10 +2,10 @@
 require('./style.css');
 const React = require('react');
 const ReactDOM = require('react-dom');
-const Handler = require('../controllers/handlers.js');
+const Movies = require('../models/movies.js');
 const App = require('./components/app.js');
 
 
-Handler.getInitialData((movieData) => {
+Movies.getAllMovies((movieData) => {
   ReactDOM.render(<App movieData={movieData}/>, document.getElementById('root'));
 });

@@ -1,5 +1,5 @@
-const movieData = require('../database/data.js');
+const Movies = require('../models/movies.js');
 
-exports.getInitialData = (callback) => {
-  callback(movieData);
-};
+exports.handleSearchClick = (searchStr, callback) => {
+  Movies.getFilteredMovies(searchStr, callback);
+}

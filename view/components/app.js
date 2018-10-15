@@ -1,7 +1,7 @@
 const React = require('react');
 const MovieList = require('./movieList.js');
 const SearchBar = require('./searchBar.js');
-
+const Handlers = require('../../controllers/handlers.js');
 
 class App extends React.Component {
   constructor(props) {
@@ -9,6 +9,16 @@ class App extends React.Component {
     this.state = {
       movieData: this.props.movieData
     }
+  }
+
+  searchClickHandler() {
+    const searchBar = document.getElementsByClassName('search-bar')[0];
+    const searchStr = searchBar.value;
+    // console.log(this);
+    Handlers.handleSearchClick(searchStr, (filteredMovies) => {
+      this.setState(filteredMovies);
+      console.log('I was clicked');
+    });
   }
 
   render() {
@@ -19,7 +29,7 @@ class App extends React.Component {
           <h1>MovieList</h1>
         </header>
 
-        <SearchBar />
+        <SearchBar searchClickHandler={this.searchClickHandler.bind(this)}/>
 
         <div className='container'>
           <MovieList movieData={this.state.movieData} />
