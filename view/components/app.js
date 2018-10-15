@@ -16,8 +16,9 @@ class App extends React.Component {
     const searchStr = searchBar.value;
     // console.log(this);
     Handlers.handleSearchClick(searchStr, (filteredMovies) => {
-      this.setState(filteredMovies);
-      console.log('I was clicked');
+      console.log(filteredMovies);
+      this.setState({movieData: filteredMovies});
+      // console.log('I was clicked');
     });
   }
 
