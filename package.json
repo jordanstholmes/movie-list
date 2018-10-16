@@ -4,7 +4,6 @@
   "description": "Lists movies",
   "private": true,
   "scripts": {
-    "test": "open dist/index.html",
     "build": "webpack",
     "server": "nodemon server/server.js"
   },
