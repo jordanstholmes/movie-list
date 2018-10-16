@@ -12,14 +12,15 @@ class App extends React.Component {
   }
 
   searchClickHandler() {
-    const searchBar = document.getElementsByClassName('search-bar')[0];
-    const searchStr = searchBar.value;
-    // console.log(this);
-    Handlers.handleSearchClick(searchStr, (filteredMovies) => {
-      console.log(filteredMovies);
-      this.setState({movieData: filteredMovies});
-      // console.log('I was clicked');
-    });
+    Handlers.handleSearchClick();
+    // const searchBar = document.getElementsByClassName('search-bar')[0];
+    // const searchStr = searchBar.value;
+    // // console.log(this);
+    // Handlers.handleSearchClick(searchStr, (filteredMovies) => {
+    //   console.log(filteredMovies);
+    //   this.setState({movieData: filteredMovies});
+    //   // console.log('I was clicked');
+    // });
   }
 
   render() {

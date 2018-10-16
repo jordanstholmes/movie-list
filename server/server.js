@@ -9,7 +9,7 @@ app.use(express.static(path.resolve(__dirname, '../dist')));
 app.use(parser.text());
 
 app.get('/movie-list', (req, res, next) => {
-  console.log(req.body);
+  console.log('Received the Request!');
   res.end();
 })
 

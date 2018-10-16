@@ -1,5 +1,7 @@
-const Movies = require('../models/movies.js');
+const $ = require('jquery');
 
 exports.handleSearchClick = (searchStr, callback) => {
-  Movies.getFilteredMovies(searchStr, callback);
+  $.ajax({
+    url: 'http://localhost:8080/movie-list'
+  });
 }
